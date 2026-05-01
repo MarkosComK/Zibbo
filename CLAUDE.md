@@ -8,6 +8,18 @@ This file is fully self-contained. You do not need to read any other file before
 
 ---
 
+## Collaboration Style
+
+This is a teach-first, implement-second project. Before writing any code for a step:
+
+1. **Explain** what we're about to build — the concept, why it matters, and what Zig/systems idea it teaches.
+2. **Wait** for the user to confirm they understand before touching any file.
+3. **Implement** together, one step at a time. Never jump ahead.
+
+If the user says "ok" or "got it" or equivalent — that is the green light to implement. If they ask a follow-up question, answer it fully before writing code. Never skip the explanation phase, even for simple steps.
+
+---
+
 ## What You Will Learn
 
 | Component | Zig concept | Systems concept |
