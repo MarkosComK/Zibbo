@@ -136,6 +136,15 @@ orderbook-zig/
 
 ---
 
+## Implementation Notes (discoveries made during build)
+
+- **`executed_size` removed from `OrderEntry`:** The original spec listed 8 × 8-byte fields which totals 72 bytes before enums/pad. `executed_size` was dropped — it's computable as `original_size - size`. The comptime assertion caught this immediately.
+- **macOS test target:** `zig test src/file.zig` fails on macOS with this dev build due to SDK linker issues. Use `zig test src/file.zig -target aarch64-macos` instead.
+- **Zib cannot be wired via `zig fetch --save`:** Zib has no `build.zig.zon`, so the package manager can't auto-name it. Zib integration will be handled manually when a step actually needs it. `types.zig` and likely several other files don't need it at all.
+- **Docs branch:** Learning Q&A and explanations live in the `docs` branch under `docs/`. One file per step. Add to it after each step's explanation and any notable questions.
+
+---
+
 ## Build Order — Follow Strictly
 
 Write a `test` block in each file before moving to the next.
