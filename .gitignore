@@ -3,3 +3,5 @@ zig-out/
 results_*.json
 comparison.png
 *.class
+.idea/
+graphify-out/
